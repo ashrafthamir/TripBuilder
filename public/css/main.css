@@ -1,0 +1,61 @@
+* {
+    font-weight: bold;
+}
+
+html, body {
+    background-color:#f5f8fa;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+header {
+    padding-bottom: 10px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.free-block {
+    top: 100px;
+}
+
+.homebtn {
+    width: 25%;
+    height: 50px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.no-border {
+    border-style: none !important;
+}
+
+.valign-middle {
+    vertical-align: middle !important;
+}
+
+.talign-left {
+    text-align: left;
+}
+
+.td-width {
+    width: 100px;
+}
+/* Bootstrap edit */
+h1, h2, .btn, .dropdown-item {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    font-weight: 600;
+}
+/* End Bootstrap edit */
