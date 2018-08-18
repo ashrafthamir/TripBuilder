@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Air Canada",
+    "iata": "AC",
+    "icao": "ACA",
+    "callsign": "AIR CANADA"
+  },
+  {
+    "id": 2,
+    "name": "Air Transat",
+    "iata": "TS",
+    "icao": "TSC",
+    "callsign": "TRANSAT"
+  },
+  {
+    "id": 3,
+    "name": "Porter Airlines",
+    "iata": "PD",
+    "icao": "POE",
+    "callsign": "PORTER AIR"
+  },
+  {
+    "id": 4,
+    "name": "WestJet",
+    "iata": "WS",
+    "icao": "WJA",
+    "callsign": "WESTJET"
+  }
+]
