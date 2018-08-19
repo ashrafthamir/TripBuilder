@@ -49,6 +49,7 @@ export default {
         }
     },
     created() {
+        console.log("im here");
         this.fetchAirports();
     },
     methods: {
@@ -58,10 +59,12 @@ export default {
         fetchAirports(page_url) {
             let vm = this;
             page_url = page_url || '/tripbuilder/public/api/v1/paginated/airports'
+            console.log("url: " + page_url)
             axios.get(page_url)
             .then(res => {
                 this.airports = res.data.data;
                 vm.makePagination(res.data.meta, res.data.links);
+                console.log(this.airports);
             });
         },
         makePagination(meta, links) {

@@ -25,6 +25,6 @@
     <script src="{{ URL::to('js/popper.min.js') }}"></script>
     <script src="{{ URL::to('js/bootstrap.min.js') }}"></script>
     <script src="{{ URL::to('js/main.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ URL::to('js/app.js') }}"></script>
 </body>
 </html>
