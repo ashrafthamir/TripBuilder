@@ -47,7 +47,7 @@ GET: /trip/builder/public/api/v1/airlines
 
 GET: /trip/builder/public/api/v1/airports
 
-GET: /trip/builder/public/api/v1/trip
+GET: /trip/builder/public/api/v1/Trips
 
 GET: /trip/builder/public/api/v1/flights
 ```
@@ -58,7 +58,7 @@ GET: /trip/builder/public/api/v1/paginated/airlines
 
 GET: /trip/builder/public/api/v1/paginated/airports
 
-GET: /trip/builder/public/api/v1/paginated/trip
+GET: /trip/builder/public/api/v1/paginated/trips
 
 GET: /trip/builder/public/api/v1/paginated/flights
 ```
