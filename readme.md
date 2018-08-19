@@ -41,7 +41,7 @@ npm run watch
 
 We have APIs for Airlines, Airports, Trips and Flights
 
-Get All the data
+Get all the data
 ```
 GET: /trip/builder/public/api/v1/airlines
 
@@ -72,7 +72,7 @@ GET: /trip/builder/public/api/v1/trip/{trip_id}
 
 Get Flights of specific Trip
 ```
-GET: /trip/builder/public/api/v1/trip/{trip_id}/Flights
+GET: /trip/builder/public/api/v1/trip/{trip_id}/flights
 ```
 
 Add a new Flight to a Trip
@@ -82,10 +82,14 @@ POST:  /trip/builder/public/api/v1/flights
 
 Delete a Flight from a Trip
 ```
-Delete:  /trip/builder/public/api/v1/flights/{flight_id}
+DELETE:  /trip/builder/public/api/v1/flights/{flight_id}
 ```
 
-Example adding a Flight from Airline with id=1 to Trip with id=1
+### Example adding a Flight from Airline with id=1 to Trip with id=1
 ```
 POST: /trip/builder/public/api/v1/flights?trip_id=1&airline_id=1
 ```
+
+### Example deleting a Flight with id=1
+```
+DELETE: /tripbuilder/public/api/v1/flights/1
