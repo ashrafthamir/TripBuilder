@@ -43320,7 +43320,7 @@ var render = function() {
           "a",
           {
             staticClass: "navbar-brand",
-            attrs: { href: "/TripBuilder/public" }
+            attrs: { href: "/tripbuilder/public" }
           },
           [_vm._v("Trip Builder")]
         ),

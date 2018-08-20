@@ -17,10 +17,10 @@ class FlightsTableSeeder extends Seeder
         Flight::truncate();
         $airlines = Airline::pluck('id')->toArray();
         $trips = Trip::pluck('id')->toArray();
-        for($i = 0; $i < 100; $i++) {
+        for($i = 0; $i < 200; $i++) {
             $airline_id = $airlines[array_rand($airlines)];
-            $airline_ICAO = Airline::find($airline_id)->pluck('icao')->toArray();
-            $flight_number = $airline_ICAO[array_rand($airline_ICAO)].rand(100,999);
+            $airline_ICAO = Airline::find($airline_id)->icao;
+            $flight_number = $airline_ICAO.rand(100,999);
             Flight::create(array(
                 'flight_number' => $flight_number,
                 'trip_id' => $trips[array_rand($trips)],
