@@ -47574,8 +47574,8 @@ if (false) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//const rootUrl= 'http://localhost/tripbuilder/public';
-var rootUrl = 'http://ash-tripbuilder.herokuapp.com';
+var rootUrl = 'http://localhost/tripbuilder/public';
+//const rootUrl= 'http://ash-tripbuilder.herokuapp.com';
 
 /* harmony default export */ __webpack_exports__["a"] = (rootUrl);
 
