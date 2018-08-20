@@ -47336,7 +47336,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         },
         deleteFlight: function deleteFlight(id) {
             if (confirm('Are you sure?')) {
-                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete(__WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + 'c/api/v1/flights/' + id).then(this.fetchTripFlights()).then(function (message) {
+                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete(__WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + '/api/v1/flights/' + id).then(this.fetchTripFlights()).then(function (message) {
                     return alert(message.data.message);
                 });
             }

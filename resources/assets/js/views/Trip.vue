@@ -129,7 +129,7 @@ export default {
         },
         deleteFlight(id) {
             if(confirm('Are you sure?')) {
-                axios.delete(rootUrl + 'c/api/v1/flights/' + id)
+                axios.delete(rootUrl + '/api/v1/flights/' + id)
                 .then(this.fetchTripFlights())
                 .then(message => alert(message.data.message));
             }
