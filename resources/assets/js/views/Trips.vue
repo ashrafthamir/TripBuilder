@@ -82,7 +82,7 @@ export default {
             });
         },
         fetchAirports() {
-            axios.get('/http://ash-tripbuilder.herokuapp.com/api/v1/airports')
+            axios.get('http://ash-tripbuilder.herokuapp.com/api/v1/airports')
             .then(res => {
                 this.airports = res.data.data;
             });

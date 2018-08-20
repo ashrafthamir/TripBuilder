@@ -46958,7 +46958,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         fetchAirports: function fetchAirports() {
             var _this2 = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/http://ash-tripbuilder.herokuapp.com/api/v1/airports').then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://ash-tripbuilder.herokuapp.com/api/v1/airports').then(function (res) {
                 _this2.airports = res.data.data;
             });
         },
