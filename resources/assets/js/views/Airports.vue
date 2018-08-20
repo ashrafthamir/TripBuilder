@@ -62,6 +62,7 @@ export default {
             console.log("url: " + page_url)
             axios.get(page_url)
             console.log("after axios");
+                        console.log("after axios");
             .then(res => {
                 this.airports = res.data.data;
                 console.log("res.data: " + res.data);
