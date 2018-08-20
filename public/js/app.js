@@ -46361,7 +46361,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             var vm = this;
-            page_url = page_url || '/tripbuilder/public/api/v1/paginated/airports';
+            page_url = page_url || 'api/v1/paginated/airports';
             console.log("url: " + page_url);
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(page_url).then(function (res) {
                 _this.airports = res.data.data;
