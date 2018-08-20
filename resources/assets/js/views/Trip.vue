@@ -55,6 +55,8 @@
 
 <script>
 import axios from 'axios'
+import rootUrl from '../rootUrl'
+
 export default {
     data() {
         return {
@@ -94,31 +96,31 @@ export default {
     },
     methods: {
         fetchTrip() {
-            axios.get('/tripbuilder/public/api/v1/trips/' + this.$route.params.id)
+            axios.get(rootUrl + '/api/v1/trips/' + this.$route.params.id)
             .then(res => {
                 this.trip = res.data.data;
             });
         },
         fetchAirports() {
-            axios.get('/tripbuilder/public/api/v1/airports')
+            axios.get(rootUrl + '/api/v1/airports')
             .then(res => {
                 this.airports = res.data.data;
             });
         },
         fetchTripFlights() {
-            axios.get('/tripbuilder/public/api/v1/trips/' + this.$route.params.id + '/flights')
+            axios.get(rootUrl + '/api/v1/trips/' + this.$route.params.id + '/flights')
             .then(res => {
                 this.flights = res.data.data;
             });
         },
         fetchAirlines() {
-            axios.get('/tripbuilder/public/api/v1/airlines')
+            axios.get(rootUrl + '/api/v1/airlines')
             .then(res => {
                 this.airlines = res.data.data;
             });
         },
         addFlight() {
-            axios.post('/tripbuilder/public/api/v1/flights', {
+            axios.post(rootUrl + '/api/v1/flights', {
                 trip_id: this.trip.id,
                 airline_id: this.airline.id
             })
@@ -127,7 +129,7 @@ export default {
         },
         deleteFlight(id) {
             if(confirm('Are you sure?')) {
-                axios.delete('/tripbuilder/public/api/v1/flights/' + id)
+                axios.delete(rootUrl + 'c/api/v1/flights/' + id)
                 .then(this.fetchTripFlights())
                 .then(message => alert(message.data.message));
             }

@@ -27,6 +27,8 @@
 
 <script>
 import axios from 'axios'
+import rootUrl from '../rootUrl'
+
 export default {
     data() {
         return {
@@ -45,7 +47,7 @@ export default {
     },
     methods: {
         fetchAirlines() {
-            axios.get('/tripbuilder/public/api/v1/airlines')
+            axios.get(rootUrl + '/api/v1/airlines')
             .then(res => {
                 this.airlines = res.data.data;
             });

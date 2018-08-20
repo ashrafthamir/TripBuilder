@@ -42,6 +42,7 @@
 
 <script>
 import axios from 'axios'
+import rootUrl from '../rootUrl'
 export default {
     data() {
         return {
@@ -74,7 +75,7 @@ export default {
         },
         fetchTrips(page_url) {
             let vm = this;
-            page_url = page_url || '/tripbuilder/public/api/v1/paginated/trips'
+            page_url = page_url || rootUrl + '/api/v1/paginated/trips';
             axios.get(page_url)
             .then(res => {
                 this.trips = res.data.data;
@@ -82,7 +83,7 @@ export default {
             });
         },
         fetchAirports() {
-            axios.get('/tripbuilder/public/api/v1/airports')
+            axios.get(rootUrl + '/api/v1/airports')
             .then(res => {
                 this.airports = res.data.data;
             });

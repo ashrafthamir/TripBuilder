@@ -12044,7 +12044,7 @@ module.exports = Vue;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(63);
+module.exports = __webpack_require__(64);
 
 
 /***/ }),
@@ -43470,7 +43470,7 @@ if (false) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__views_Airlines___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__views_Airlines__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__views_Trips__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__views_Trips___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__views_Trips__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__views_Trip__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__views_Trip__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__views_Trip___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__views_Trip__);
 
 
@@ -46298,6 +46298,7 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rootUrl__ = __webpack_require__(75);
 //
 //
 //
@@ -46332,6 +46333,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -46360,7 +46363,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             var vm = this;
-            page_url = page_url || '/tripbuilder/public/api/v1/paginated/airports';
+            page_url = page_url || __WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + '/api/v1/paginated/airports';
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(page_url).then(function (res) {
                 _this.airports = res.data.data;
                 vm.makePagination(res.data.meta, res.data.links);
@@ -46569,6 +46572,7 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rootUrl__ = __webpack_require__(75);
 //
 //
 //
@@ -46582,6 +46586,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -46598,7 +46604,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchAirport: function fetchAirport() {
             var _this = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/airports/' + this.$route.params.id).then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(__WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + '/api/v1/airports/' + this.$route.params.id).then(function (res) {
                 _this.airport = res.data.data;
             });
         }
@@ -46692,6 +46698,7 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rootUrl__ = __webpack_require__(75);
 //
 //
 //
@@ -46719,6 +46726,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -46742,7 +46751,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchAirlines: function fetchAirlines() {
             var _this = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/airlines').then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(__WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + '/api/v1/airlines').then(function (res) {
                 _this.airlines = res.data.data;
             });
         }
@@ -46822,7 +46831,7 @@ var normalizeComponent = __webpack_require__(1)
 /* script */
 var __vue_script__ = __webpack_require__(58)
 /* template */
-var __vue_template__ = __webpack_require__(59)
+var __vue_template__ = __webpack_require__(60)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -46868,6 +46877,7 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rootUrl__ = __webpack_require__(75);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //
@@ -46914,6 +46924,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         var _ref;
@@ -46948,7 +46959,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             var _this = this;
 
             var vm = this;
-            page_url = page_url || '/tripbuilder/public/api/v1/paginated/trips';
+            page_url = page_url || __WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + '/api/v1/paginated/trips';
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(page_url).then(function (res) {
                 _this.trips = res.data.data;
                 vm.makePagination(res.data.meta, res.data.links);
@@ -46957,7 +46968,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         fetchAirports: function fetchAirports() {
             var _this2 = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/airports').then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(__WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + '/api/v1/airports').then(function (res) {
                 _this2.airports = res.data.data;
             });
         },
@@ -46974,7 +46985,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 });
 
 /***/ }),
-/* 59 */
+/* 59 */,
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -47134,15 +47146,15 @@ if (false) {
 }
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(61)
+var __vue_script__ = __webpack_require__(62)
 /* template */
-var __vue_template__ = __webpack_require__(62)
+var __vue_template__ = __webpack_require__(63)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -47181,13 +47193,14 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__rootUrl__ = __webpack_require__(75);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //
@@ -47247,6 +47260,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         var _ref;
@@ -47286,33 +47301,33 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         fetchTrip: function fetchTrip() {
             var _this = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/trips/' + this.$route.params.id).then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(__WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + '/api/v1/trips/' + this.$route.params.id).then(function (res) {
                 _this.trip = res.data.data;
             });
         },
         fetchAirports: function fetchAirports() {
             var _this2 = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/airports').then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(__WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + '/api/v1/airports').then(function (res) {
                 _this2.airports = res.data.data;
             });
         },
         fetchTripFlights: function fetchTripFlights() {
             var _this3 = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/trips/' + this.$route.params.id + '/flights').then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(__WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + '/api/v1/trips/' + this.$route.params.id + '/flights').then(function (res) {
                 _this3.flights = res.data.data;
             });
         },
         fetchAirlines: function fetchAirlines() {
             var _this4 = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/airlines').then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(__WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + '/api/v1/airlines').then(function (res) {
                 _this4.airlines = res.data.data;
             });
         },
         addFlight: function addFlight() {
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/tripbuilder/public/api/v1/flights', {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post(__WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + '/api/v1/flights', {
                 trip_id: this.trip.id,
                 airline_id: this.airline.id
             }).then(this.fetchTripFlights()).then(function (message) {
@@ -47321,7 +47336,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         },
         deleteFlight: function deleteFlight(id) {
             if (confirm('Are you sure?')) {
-                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('/tripbuilder/public/api/v1/flights/' + id).then(this.fetchTripFlights()).then(function (message) {
+                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete(__WEBPACK_IMPORTED_MODULE_1__rootUrl__["a" /* default */] + 'c/api/v1/flights/' + id).then(this.fetchTripFlights()).then(function (message) {
                     return alert(message.data.message);
                 });
             }
@@ -47330,7 +47345,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 });
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -47539,10 +47554,30 @@ if (false) {
 }
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var rootUrl = 'http://localhost/tripbuilder/public';
+//const rootUrl= 'https://ash-tripbuilder.herokuapp.com';
+
+/* harmony default export */ __webpack_exports__["a"] = (rootUrl);
 
 /***/ })
 /******/ ]);
