@@ -46349,6 +46349,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
     created: function created() {
+        console.log("im here");
         this.fetchAirports();
     },
 
@@ -46361,9 +46362,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             var vm = this;
             page_url = page_url || '/tripbuilder/public/api/v1/paginated/airports';
+            console.log("url: " + page_url);
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(page_url).then(function (res) {
                 _this.airports = res.data.data;
                 vm.makePagination(res.data.meta, res.data.links);
+                console.log(_this.airports);
             });
         },
         makePagination: function makePagination(meta, links) {
