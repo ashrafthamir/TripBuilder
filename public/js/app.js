@@ -46349,7 +46349,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
     created: function created() {
-        console.log("im here");
         this.fetchAirports();
     },
 
@@ -46361,7 +46360,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             var vm = this;
-            page_url = page_url || 'http://ash-tripbuilder.herokuapp.com/api/v1/paginated/airports';
+            page_url = page_url || '/tripbuilder/public/api/v1/paginated/airports';
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(page_url).then(function (res) {
                 _this.airports = res.data.data;
                 vm.makePagination(res.data.meta, res.data.links);
@@ -46599,7 +46598,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchAirport: function fetchAirport() {
             var _this = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://ash-tripbuilder.herokuapp.com/api/v1/airports/' + this.$route.params.id).then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/airports/' + this.$route.params.id).then(function (res) {
                 _this.airport = res.data.data;
             });
         }
@@ -46743,7 +46742,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchAirlines: function fetchAirlines() {
             var _this = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://ash-tripbuilder.herokuapp.com/api/v1/airlines').then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/airlines').then(function (res) {
                 _this.airlines = res.data.data;
             });
         }
@@ -46949,7 +46948,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
             var _this = this;
 
             var vm = this;
-            page_url = page_url || 'http://ash-tripbuilder.herokuapp.com/api/v1/paginated/trips';
+            page_url = page_url || '/tripbuilder/public/api/v1/paginated/trips';
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(page_url).then(function (res) {
                 _this.trips = res.data.data;
                 vm.makePagination(res.data.meta, res.data.links);
@@ -46958,7 +46957,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         fetchAirports: function fetchAirports() {
             var _this2 = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://ash-tripbuilder.herokuapp.com/api/v1/airports').then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/airports').then(function (res) {
                 _this2.airports = res.data.data;
             });
         },
@@ -47287,33 +47286,33 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         fetchTrip: function fetchTrip() {
             var _this = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://ash-tripbuilder.herokuapp.com/api/v1/trips/' + this.$route.params.id).then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/trips/' + this.$route.params.id).then(function (res) {
                 _this.trip = res.data.data;
             });
         },
         fetchAirports: function fetchAirports() {
             var _this2 = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://ash-tripbuilder.herokuapp.com/api/v1/airports').then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/airports').then(function (res) {
                 _this2.airports = res.data.data;
             });
         },
         fetchTripFlights: function fetchTripFlights() {
             var _this3 = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://ash-tripbuilder.herokuapp.com/api/v1/trips/' + this.$route.params.id + '/flights').then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/trips/' + this.$route.params.id + '/flights').then(function (res) {
                 _this3.flights = res.data.data;
             });
         },
         fetchAirlines: function fetchAirlines() {
             var _this4 = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://ash-tripbuilder.herokuapp.com/api/v1/airlines').then(function (res) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/tripbuilder/public/api/v1/airlines').then(function (res) {
                 _this4.airlines = res.data.data;
             });
         },
         addFlight: function addFlight() {
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('http://ash-tripbuilder.herokuapp.com/api/v1/flights', {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/tripbuilder/public/api/v1/flights', {
                 trip_id: this.trip.id,
                 airline_id: this.airline.id
             }).then(this.fetchTripFlights()).then(function (message) {
@@ -47322,7 +47321,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         },
         deleteFlight: function deleteFlight(id) {
             if (confirm('Are you sure?')) {
-                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('http://ash-tripbuilder.herokuapp.com/api/v1/flights/' + id).then(this.fetchTripFlights()).then(function (message) {
+                __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('/tripbuilder/public/api/v1/flights/' + id).then(this.fetchTripFlights()).then(function (message) {
                     return alert(message.data.message);
                 });
             }

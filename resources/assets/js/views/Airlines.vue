@@ -45,7 +45,7 @@ export default {
     },
     methods: {
         fetchAirlines() {
-            axios.get('http://ash-tripbuilder.herokuapp.com/api/v1/airlines')
+            axios.get('/tripbuilder/public/api/v1/airlines')
             .then(res => {
                 this.airlines = res.data.data;
             });

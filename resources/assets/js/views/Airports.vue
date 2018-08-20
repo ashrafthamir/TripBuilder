@@ -49,7 +49,6 @@ export default {
         }
     },
     created() {
-        console.log("im here");
         this.fetchAirports();
     },
     methods: {
@@ -58,7 +57,7 @@ export default {
         },
         fetchAirports(page_url) {
             let vm = this;
-            page_url = page_url || 'http://ash-tripbuilder.herokuapp.com/api/v1/paginated/airports'
+            page_url = page_url || '/tripbuilder/public/api/v1/paginated/airports'
             axios.get(page_url)
             .then(res => {
                 this.airports = res.data.data;

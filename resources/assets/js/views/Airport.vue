@@ -24,7 +24,7 @@ export default {
     },
     methods: {
         fetchAirport() {
-            axios.get('http://ash-tripbuilder.herokuapp.com/api/v1/airports/' + this.$route.params.id)
+            axios.get('/tripbuilder/public/api/v1/airports/' + this.$route.params.id)
             .then(res => {
                 this.airport = res.data.data;
             });
