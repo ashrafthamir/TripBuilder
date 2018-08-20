@@ -46365,8 +46365,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             console.log("url: " + page_url);
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(page_url).then(function (res) {
                 _this.airports = res.data.data;
+                console.log("res.data: " + res.data);
+                console.log("this.airports: " + _this.airports);
                 vm.makePagination(res.data.meta, res.data.links);
-                console.log(_this.airports);
             });
         },
         makePagination: function makePagination(meta, links) {
