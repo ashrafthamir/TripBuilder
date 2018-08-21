@@ -43,53 +43,53 @@ We have APIs for Airlines, Airports, Trips and Flights
 
 Get all the data
 ```
-GET: /trip/builder/public/api/v1/airlines
+GET: /api/v1/airlines
 
-GET: /trip/builder/public/api/v1/airports
+GET: /api/v1/airports
 
-GET: /trip/builder/public/api/v1/Trips
+GET: /api/v1/Trips
 
-GET: /trip/builder/public/api/v1/flights
+GET: /api/v1/flights
 ```
 
 Get all the data paginated
 ```
-GET: /trip/builder/public/api/v1/paginated/airlines
+GET: /api/v1/paginated/airlines
 
-GET: /trip/builder/public/api/v1/paginated/airports
+GET: /api/v1/paginated/airports
 
-GET: /trip/builder/public/api/v1/paginated/trips
+GET: /api/v1/paginated/trips
 
-GET: /trip/builder/public/api/v1/paginated/flights
+GET: /api/v1/paginated/flights
 ```
 
 Get one row result
 ```
-GET: /trip/builder/public/api/v1/airports/{airport_id}
+GET: /api/v1/airports/{airport_id}
 
-GET: /trip/builder/public/api/v1/trip/{trip_id}
+GET: /api/v1/trip/{trip_id}
 ```
 
 Get Flights of specific Trip
 ```
-GET: /trip/builder/public/api/v1/trip/{trip_id}/flights
+GET: /api/v1/trip/{trip_id}/flights
 ```
 
 Add a new Flight to a Trip
 ```
-POST:  /trip/builder/public/api/v1/flights
+POST: /api/v1/flights
 ```
 
 Delete a Flight from a Trip
 ```
-DELETE:  /trip/builder/public/api/v1/flights/{flight_id}
+DELETE: /api/v1/flights/{flight_id}
 ```
 
 ### Example adding a Flight from Airline with id=1 to Trip with id=1
 ```
-POST: /trip/builder/public/api/v1/flights?trip_id=1&airline_id=1
+POST: /api/v1/flights?trip_id=1&airline_id=1
 ```
 
 ### Example deleting a Flight with id=1
 ```
-DELETE: /tripbuilder/public/api/v1/flights/1
+DELETE: /api/v1/flights/1
